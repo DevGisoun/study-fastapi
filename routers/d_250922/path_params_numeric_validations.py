@@ -9,7 +9,7 @@ router = APIRouter(
 @router.get("/items/{item_id}")
 async def read_items(*, item_id: int = Path(title="조회할 Item의 ID", ge=1), q: str):
     """
-    - `*` 를 사용하여 모든 매개변수를 키워드 전용으로 만들어 FastAPI가 경로와 쿼리 매개변수를 명확하게 구분
+    - `*` 를 사용하여 모든 매개변수를 키워드 전용으로 만들어 FastAPI가 경로와 쿼리 매개변수를 명확하게 구분하는 예제.
     - `ge=1`: `item_id` 가 1보다 크거나 같아야 한다.
         - `gt`: 크거나(**g**reater **t**han)
         - `ge`: 크거나 같은(**g**reater than or **e**qual)
